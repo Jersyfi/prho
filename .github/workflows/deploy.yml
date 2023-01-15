@@ -16,5 +16,5 @@ jobs:
         password: ${{ secrets.IONOS_FTP_PASSWORD }}
         protocol: ftps
         port: 22
-        server-dir: prho.de
+        server-dir: prho.de/
         local-dir: ./public/
