@@ -1,8 +1,8 @@
 on: push
-name: 🚀 Deploy website on push
+name: Deploy to IONOS
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
@@ -15,6 +15,6 @@ jobs:
         username: ${{ secrets.IONOS_FTP_USER }}
         password: ${{ secrets.IONOS_FTP_PASSWORD }}
         protocol: ftps
-        port: 22
+        port: 990
         server-dir: prho.de/
         local-dir: ./public/
