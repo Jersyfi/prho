@@ -1,5 +1,7 @@
-on: push
 name: Deploy to IONOS
+
+on: push
+
 jobs:
   web-deploy:
     name: Deploy
@@ -9,10 +11,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      uses: wangyucode/sftp-upload-action@v1.4.8
       with:
-        server: ${{ secrets.IONOS_FTP_SERVER }}
+        remoteDir: prho.de/
+        localDir: ./public/
+        host: ${{ secrets.IONOS_FTP_SERVER }}
         username: ${{ secrets.IONOS_FTP_USER }}
         password: ${{ secrets.IONOS_FTP_PASSWORD }}
-        protocol: ftps
-        port: 990
