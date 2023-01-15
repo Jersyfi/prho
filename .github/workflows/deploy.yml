@@ -18,3 +18,6 @@ jobs:
         host: ${{ secrets.IONOS_FTP_SERVER }}
         username: ${{ secrets.IONOS_FTP_USER }}
         password: ${{ secrets.IONOS_FTP_PASSWORD }}
+        dryRun: false
+        forceUpload: true
+        removeExtraFilesOnServer: true
