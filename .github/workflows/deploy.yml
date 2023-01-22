@@ -1,4 +1,5 @@
 name: Deploy to IONOS
+run-name: "Deploy to IONOS: Build PrHO · ${{ github.event.head_commit.message || format('Triggered by {0}', github.triggering_actor) }}"
 
 on:
   push:
